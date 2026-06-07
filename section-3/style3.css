@@ -129,7 +129,8 @@ body {
 .swiper {
   width: 100%;
   padding-top: 40px;
-  padding-bottom: 48px !important; /* space for pagination */
+  padding-bottom: 48px !important;
+  /* space for pagination */
   overflow: hidden;
   /* Hide until Swiper fully initializes — prevents FOUC flash */
   opacity: 0;
@@ -253,7 +254,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 50px; /* quote icon 90px + top-padding 50px = 190px from card top, but padding handles 50px already */
+  margin-top: 50px;
+  /* quote icon 90px + top-padding 50px = 190px from card top, but padding handles 50px already */
 }
 
 .review-text {
@@ -262,6 +264,7 @@ body {
   align-items: center;
   gap: 20px;
 }
+
 .review-stars ul {
   display: inline-flex;
   list-style: none;
@@ -299,6 +302,7 @@ body {
   margin-bottom: 40px;
   flex-shrink: 0;
 }
+
 /* reviewer */
 .review-user {
   display: flex;
@@ -390,6 +394,7 @@ body {
   .swiper-button-next {
     right: -8px;
   }
+
   .swiper-button-prev {
     left: -8px;
   }

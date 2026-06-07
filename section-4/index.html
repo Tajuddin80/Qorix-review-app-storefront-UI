@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        [data-section="qorix-review-quick-review-widget"] {
+            ---color-primray: #1c1c1c;
+            ---color-secondary: #008923;
+            ---color-gray: #616161;
+        }
+    </style>
+    <section data-section="qorix-review-quick-review-widget">
+
+        <div class="qr-frame">
+            <div class="qr-container">
+                <div class="qr-header">
+                    <div class="qr-header-left">
+                        <div class="qr-header-title-block">
+                            <div class="qr-header-title-container">
+                                <div class="qr-header-title">Customer Reviews</div>
+                            </div>
+                            <div class="qr-rating-row">
+                                <div class="qr-rating-num-container">
+                                    <span class="qr-rating-num">4.9</span>
+                                </div>
+                                <span class="qr-rating-meta">24 reviews</span>
+                            </div>
+                        </div>
+                        <button class="qr-btn-green">
+                            <span class="qr-btn-text">Write a review</span>
+                        </button>
+                    </div>
+                    <div class="qr-header-right">
+                        <button class="qr-icon-pill" title="Sort" id="qr-sort-btn">
+                            <div class="qr-icon-sort">
+                                <div class="qr-vector-sort-1"></div>
+                                <div class="qr-vector-sort-3"></div>
+                                <div class="qr-vector-sort-2"></div>
+                            </div>
+                        </button>
+                        <button class="qr-icon-pill" title="Filter">
+                            <svg class="qr-icon-filter" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 5h18l-7 8v6l-4-2v-4z" stroke="#4A4A4A" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="qr-menu hidden" id="qr-sort-menu">
+                            <button class="qr-menu-item active" data-sort="highest">
+                                <div class="qr-menu-item-blank"></div>
+                                <span class="qr-menu-item-text">Highest rating</span>
+                            </button>
+                            <button class="qr-menu-item" data-sort="lowest">
+                                <div class="qr-menu-item-blank"></div>
+                                <span class="qr-menu-item-text">Lowest rating</span>
+                            </button>
+                            <button class="qr-menu-item" data-sort="only-pictures">
+                                <div class="qr-menu-item-blank"></div>
+                                <span class="qr-menu-item-text">Only pictures</span>
+                            </button>
+                            <button class="qr-menu-item" data-sort="pictures-first">
+                                <div class="qr-menu-item-blank"></div>
+                                <span class="qr-menu-item-text">Pictures first</span>
+                            </button>
+                            <button class="qr-menu-item" data-sort="videos-first">
+                                <div class="qr-menu-item-blank"></div>
+                                <span class="qr-menu-item-text">Videos first</span>
+                            </button>
+                            <button class="qr-menu-item" data-sort="most-helpful">
+                                <div class="qr-menu-item-blank"></div>
+                                <span class="qr-menu-item-text">Most helpful</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="qr-content-area">
+                    <div class="qr-filters">
+                        <div class="qr-filters-title">Filters</div>
+                        <div class="qr-rating-filter-container">
+                            <div class="qr-rating-label">Rating</div>
+                            <div class="qr-filter-pills">
+                                <button class="qr-pill qr-pill-all" data-filter="All">All</button>
+                                <button class="qr-pill qr-pill-1" data-filter="1">1
+                                    <div class="qr-star-filled">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.3536 4.94761C12.81 3.80761 11.19 3.80761 10.6464 4.94761L8.97842 8.44201L5.13962 8.94721C3.88922 9.11281 3.38762 10.6536 4.30322 11.5224L7.11122 14.1888L6.40682 17.9952C6.17642 19.236 7.48802 20.1888 8.59682 19.5876L12 17.7396L15.4032 19.5876C16.512 20.1888 17.8236 19.236 17.5932 17.9952L16.8888 14.1888L19.6968 11.5224C20.6112 10.6536 20.1108 9.11281 18.8604 8.94721L15.0204 8.44201L13.3536 4.94761Z"
+                                                fill="#FF9500" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button class="qr-pill qr-pill-2" data-filter="2">2
+                                    <div class="qr-star-filled">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.3536 4.94761C12.81 3.80761 11.19 3.80761 10.6464 4.94761L8.97842 8.44201L5.13962 8.94721C3.88922 9.11281 3.38762 10.6536 4.30322 11.5224L7.11122 14.1888L6.40682 17.9952C6.17642 19.236 7.48802 20.1888 8.59682 19.5876L12 17.7396L15.4032 19.5876C16.512 20.1888 17.8236 19.236 17.5932 17.9952L16.8888 14.1888L19.6968 11.5224C20.6112 10.6536 20.1108 9.11281 18.8604 8.94721L15.0204 8.44201L13.3536 4.94761Z"
+                                                fill="#FF9500" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button class="qr-pill qr-pill-3" data-filter="3">3
+                                    <div class="qr-star-filled">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.3536 4.94761C12.81 3.80761 11.19 3.80761 10.6464 4.94761L8.97842 8.44201L5.13962 8.94721C3.88922 9.11281 3.38762 10.6536 4.30322 11.5224L7.11122 14.1888L6.40682 17.9952C6.17642 19.236 7.48802 20.1888 8.59682 19.5876L12 17.7396L15.4032 19.5876C16.512 20.1888 17.8236 19.236 17.5932 17.9952L16.8888 14.1888L19.6968 11.5224C20.6112 10.6536 20.1108 9.11281 18.8604 8.94721L15.0204 8.44201L13.3536 4.94761Z"
+                                                fill="#FF9500" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button class="qr-pill qr-pill-4" data-filter="4">4
+                                    <div class="qr-star-filled">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.3536 4.94761C12.81 3.80761 11.19 3.80761 10.6464 4.94761L8.97842 8.44201L5.13962 8.94721C3.88922 9.11281 3.38762 10.6536 4.30322 11.5224L7.11122 14.1888L6.40682 17.9952C6.17642 19.236 7.48802 20.1888 8.59682 19.5876L12 17.7396L15.4032 19.5876C16.512 20.1888 17.8236 19.236 17.5932 17.9952L16.8888 14.1888L19.6968 11.5224C20.6112 10.6536 20.1108 9.11281 18.8604 8.94721L15.0204 8.44201L13.3536 4.94761Z"
+                                                fill="#FF9500" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button class="qr-pill qr-pill-5" data-filter="5">5
+                                    <div class="qr-star-filled">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13.3536 4.94761C12.81 3.80761 11.19 3.80761 10.6464 4.94761L8.97842 8.44201L5.13962 8.94721C3.88922 9.11281 3.38762 10.6536 4.30322 11.5224L7.11122 14.1888L6.40682 17.9952C6.17642 19.236 7.48802 20.1888 8.59682 19.5876L12 17.7396L15.4032 19.5876C16.512 20.1888 17.8236 19.236 17.5932 17.9952L16.8888 14.1888L19.6968 11.5224C20.6112 10.6536 20.1108 9.11281 18.8604 8.94721L15.0204 8.44201L13.3536 4.94761Z"
+                                                fill="#FF9500" />
+                                        </svg>
+                                    </div>
+                                </button>
+
+                            </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="qr-reviews">
+                    <div class="qr-line-9"></div>
+                    <div class="qr-reviews-list">
+                        <!-- Dynamic reviews will be rendered here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qr-modal-overlay hidden" id="qr-modal-overlay"></div>
+        <aside class="qr-form-card hidden">
+            <div class="qr-form-header">
+                <div class="qr-form-title-designation">
+                    <div class="qr-form-avatar">
+                        <div class="qr-form-avatar-icon-container">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9" />
+                                <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="qr-form-title-text-block">
+                        <div class="qr-form-title-row">
+                            <div class="qr-form-title-text">How was your experience?</div>
+                        </div>
+                        <div class="qr-form-subtitle-text">Your feedback helps others</div>
+                    </div>
+                </div>
+                <div class="qr-form-close-btn-container">
+                    <button class="qr-form-close-btn" aria-label="Close">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round">
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="qr-form-rating-field">
+                <div class="qr-form-rating-label">Your rating *</div>
+                <div class="qr-form-rating-stars-row">
+                    <div class="qr-form-star-item">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2L14.85 8.4L21.85 9.1L16.6 13.9L18.1 20.8L12 17.2L5.9 20.8L7.4 13.9L2.15 9.1L9.15 8.4L12 2Z" />
+                        </svg>
+                    </div>
+                    <div class="qr-form-star-item">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2L14.85 8.4L21.85 9.1L16.6 13.9L18.1 20.8L12 17.2L5.9 20.8L7.4 13.9L2.15 9.1L9.15 8.4L12 2Z" />
+                        </svg>
+                    </div>
+                    <div class="qr-form-star-item">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2L14.85 8.4L21.85 9.1L16.6 13.9L18.1 20.8L12 17.2L5.9 20.8L7.4 13.9L2.15 9.1L9.15 8.4L12 2Z" />
+                        </svg>
+                    </div>
+                    <div class="qr-form-star-item">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2L14.85 8.4L21.85 9.1L16.6 13.9L18.1 20.8L12 17.2L5.9 20.8L7.4 13.9L2.15 9.1L9.15 8.4L12 2Z" />
+                        </svg>
+                    </div>
+                    <div class="qr-form-star-item">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2L14.85 8.4L21.85 9.1L16.6 13.9L18.1 20.8L12 17.2L5.9 20.8L7.4 13.9L2.15 9.1L9.15 8.4L12 2Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="qr-form-review-field">
+                <div class="qr-form-review-label">Your review *</div>
+                <div class="qr-form-textarea-container">
+                    <textarea class="qr-form-textarea"
+                        placeholder="Tell us what you loved or didn’t like..."></textarea>
+                </div>
+            </div>
+            <div class="qr-form-name-email-row">
+                <div class="qr-form-name-field">
+                    <div class="qr-form-name-label">Your name *</div>
+                    <div class="qr-form-input-container">
+                        <input class="qr-form-input" type="text" placeholder="Enter your name" />
+                    </div>
+                </div>
+                <div class="qr-form-email-field">
+                    <div class="qr-form-email-label">Email (Optional)</div>
+                    <div class="qr-form-input-container">
+                        <input class="qr-form-input" type="email" placeholder="Enter your email" />
+                    </div>
+                </div>
+            </div>
+            <div class="qr-form-media-field">
+                <div class="qr-form-media-inner-container">
+                    <div class="qr-form-media-label">Add media (optional)</div>
+                    <div class="qr-form-upload-row">
+                        <div class="qr-form-upload-main">
+                            <div class="qr-form-upload-main-inner">
+                                <div class="qr-form-upload-icon-container">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#303030" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 16V4" />
+                                        <path d="M6 10l6-6 6 6" />
+                                        <path d="M4 20h16" />
+                                    </svg>
+                                </div>
+                                <div class="qr-form-upload-text-block">
+                                    <div class="qr-form-upload-title-text">Click to upload or drag and drop</div>
+                                    <div class="qr-form-upload-sub-text">JPG, PNG, MP4, MOV up to 20MB each</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-form-upload-more">
+                            <div class="qr-form-upload-more-inner">
+                                <div class="qr-form-upload-more-icon-container">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#303030" stroke-width="1.5"
+                                        stroke-linecap="round">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </div>
+                                <div class="qr-form-upload-more-text">Add more</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit review button and footer are positioned at the bottom of the modal -->
+            <button class="qr-form-submit-btn">
+                <span class="qr-form-submit-btn-text">Submit review</span>
+            </button>
+            <div class="qr-form-footer">
+                <div class="qr-form-footer-lock-block">
+                    <div class="qr-form-footer-lock-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#616161" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="4.5" y="10.5" width="15" height="11" rx="2" />
+                            <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+                        </svg>
+                    </div>
+                    <div class="qr-form-footer-lock-text">No account required</div>
+                </div>
+                <div class="qr-form-footer-bullet">·</div>
+                <div class="qr-form-footer-public-text">Your review is public</div>
+            </div>
+        </aside>
+        </div>
+
+
+    </section>
+
+    <script>
+
+        window.qorixReviewQuickReviewWidget = [
+            {
+                id: 1,
+                rating: 4,
+                userName: "Rahat Hasan",
+                userAvatar: null,
+                date: "12/01/26",
+                productName: "Hydrating Eye Cream",
+                body: "Good results, noticed a difference in about a week. Fast shipping too.",
+                media: [
+                    { type: "image", url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=300&h=300&q=80" },
+                    { type: "image", url: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=300&h=300&q=80" },
+                    { type: "image", url: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&h=300&q=80" }
+                ],
+                helpfulCount: 5,
+                voted: false
+            },
+            {
+                id: 2,
+                rating: 5,
+                userName: "Alen Harsh",
+                userAvatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=60&h=60&q=80",
+                date: "12/01/26",
+                productName: "Hydrating Eye Cream",
+                body: "Amazing hydration, my eyes look so much brighter and less puffy. Will buy again!",
+                media: [
+                    { type: "image", url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=300&h=300&q=80" },
+                    { type: "image", url: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=300&h=300&q=80" },
+                    { type: "image", url: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&h=300&q=80" }
+                ],
+                helpfulCount: 12,
+                voted: false
+            },
+            {
+                id: 3,
+                rating: 5,
+                userName: "Alen Harsh",
+                userAvatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=60&h=60&q=80",
+                date: "12/01/26",
+                productName: "Hydrating Eye Cream",
+                body: "Good results, noticed a difference in about a week. Fast shipping too.",
+                media: [
+                    { type: "image", url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=300&h=300&q=80" },
+                    { type: "image", url: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=300&h=300&q=80" },
+                    { type: "image", url: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&h=300&q=80" }
+                ],
+                helpfulCount: 8,
+                voted: false
+            },
+            {
+                id: 4,
+                rating: 3,
+                userName: "Sara Croft",
+                userAvatar: null,
+                date: "10/01/26",
+                productName: "Hydrating Eye Cream",
+                body: "It's decent but a bit greasy for my oily skin. Nice packaging though.",
+                media: [],
+                helpfulCount: 2,
+                voted: false
+            },
+            {
+                id: 5,
+                rating: 5,
+                userName: "Alex Mercer",
+                userAvatar: null,
+                date: "05/01/26",
+                productName: "Hydrating Eye Cream",
+                body: "Best eye cream I've ever used. Here is a quick video showcasing the texture!",
+                media: [
+                    { type: "video", url: "https://assets.mixkit.co/videos/preview/mixkit-skin-cream-being-applied-41882-large.mp4" }
+                ],
+                helpfulCount: 15,
+                voted: false
+            }
+        ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const writeReviewBtn = document.querySelector('.qr-btn-green');
+            const formCard = document.querySelector('.qr-form-card');
+            const closeFormBtn = document.querySelector('.qr-form-close-btn');
+            const modalOverlay = document.getElementById('qr-modal-overlay');
+            const filterPills = document.querySelectorAll('.qr-pill');
+            const modalStars = document.querySelectorAll('.qr-form-star-item');
+            const submitBtn = document.querySelector('.qr-form-submit-btn');
+            const sortBtn = document.getElementById('qr-sort-btn');
+            const sortMenu = document.getElementById('qr-sort-menu');
+            const menuItems = document.querySelectorAll('.qr-menu-item');
+
+            let selectedRating = 0;
+            // Restore sort & filter from sessionStorage so selections survive page refreshes
+            let currentFilter = sessionStorage.getItem('qr_filter') || 'All';
+            let currentSort = sessionStorage.getItem('qr_sort') || 'highest';
+
+            // Initial reviews dataset
+            const reviewsData = window.qorixReviewQuickReviewWidget || [];
+
+            // Render Reviews lists
+            function renderReviews() {
+                const listContainer = document.querySelector('.qr-reviews-list');
+                listContainer.innerHTML = '';
+
+                // Calculate dynamic average and total reviews
+                const totalReviews = reviewsData.length;
+                const totalRating = reviewsData.reduce((sum, r) => sum + r.rating, 0);
+                const averageRating = totalReviews > 0 ? (totalRating / totalReviews).toFixed(1) : '0.0';
+
+                // Update storefront header metrics
+                document.querySelector('.qr-rating-num').innerText = averageRating;
+                document.querySelector('.qr-rating-meta').innerText = `${totalReviews} ${totalReviews === 1 ? 'review' : 'reviews'}`;
+
+                // Filter
+                let processedReviews = [...reviewsData];
+                if (currentFilter !== 'All') {
+                    processedReviews = processedReviews.filter(r => r.rating === parseInt(currentFilter));
+                }
+
+                if (currentSort === 'only-pictures') {
+                    processedReviews = processedReviews.filter(r => r.media && r.media.length > 0);
+                }
+
+                // Sort
+                processedReviews.sort((a, b) => {
+                    if (currentSort === 'highest') {
+                        return b.rating - a.rating;
+                    } else if (currentSort === 'lowest') {
+                        return a.rating - b.rating;
+                    } else if (currentSort === 'pictures-first') {
+                        const aHasImg = a.media && a.media.some(m => m.type === 'image') ? 1 : 0;
+                        const bHasImg = b.media && b.media.some(m => m.type === 'image') ? 1 : 0;
+                        return bHasImg - aHasImg;
+                    } else if (currentSort === 'videos-first') {
+                        const aHasVid = a.media && a.media.some(m => m.type === 'video') ? 1 : 0;
+                        const bHasVid = b.media && b.media.some(m => m.type === 'video') ? 1 : 0;
+                        return bHasVid - aHasVid;
+                    } else if (currentSort === 'most-helpful') {
+                        return b.helpfulCount - a.helpfulCount;
+                    }
+                    return 0;
+                });
+
+                if (processedReviews.length === 0) {
+                    listContainer.innerHTML = '<div class="qr-no-reviews">No reviews found matching the filters.</div>';
+                    return;
+                }
+
+                // Populate list
+                processedReviews.forEach((review, index) => {
+                    const reviewItem = document.createElement('div');
+                    reviewItem.className = 'qr-review-item';
+                    reviewItem.setAttribute('data-rating', review.rating);
+
+                    // Stars HTML
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        const fill = i <= review.rating ? '#FF9500' : '#B5B5B5';
+                        starsHtml += `
+                            <div class="qr-review-star-item">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3536 4.94761C12.81 3.80761 11.19 3.80761 10.6464 4.94761L8.97842 8.44201L5.13962 8.94721C3.88922 9.11281 3.38762 10.6536 4.30322 11.5224L7.11122 14.1888L6.40682 17.9952C6.17642 19.236 7.48802 20.1888 8.59682 19.5876L12 17.7396L15.4032 19.5876C16.512 20.1888 17.8236 19.236 17.5932 17.9952L16.8888 14.1888L19.6968 11.5224C20.6112 10.6536 20.1108 9.11281 18.8604 8.94721L15.0204 8.44201L13.3536 4.94761Z" fill="${fill}"/>
+                                </svg></div>
+                            `;
+                    }
+
+                    // Avatar HTML
+                    let avatarHtml = '';
+                    if (review.userAvatar) {
+                        avatarHtml = `<div class="qr-review-avatar" style="background-image: url('${review.userAvatar}'); background-size: cover; background-position: center;"></div>`;
+                    } else {
+                        avatarHtml = `
+                            <div class="qr-review-avatar qr-avatar-rahat">
+                                <div class="qr-user-placeholder-icon">
+                                    <div class="qr-user-placeholder-vector-1"></div>
+                                    <div class="qr-user-placeholder-vector-2"></div>
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    // Media HTML
+                    let mediaHtml = '';
+                    if (review.media && review.media.length > 0) {
+                        mediaHtml = '<div class="qr-review-media-row">';
+                        review.media.forEach(m => {
+                            if (m.type === 'video') {
+                                mediaHtml += `
+                                    <div class="qr-review-thumb-video">
+                                        <video src="${m.url}" muted playsinline loop></video>
+                                        <div class="qr-video-play-overlay">
+                                            <svg viewBox="0 0 24 24" fill="#FFFFFF">
+                                                <path d="M8 5v14l11-7z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                `;
+                            } else {
+                                mediaHtml += `<div class="qr-review-thumb" style="background-image: url('${m.url}');"></div>`;
+                            }
+                        });
+                        mediaHtml += '</div>';
+                    }
+
+                    reviewItem.innerHTML = `
+                        <div class="qr-review-stars-user-block">
+                            <div class="qr-review-stars-row">
+                                ${starsHtml}
+                            </div>
+                            <div class="qr-review-user-row">
+                                <div class="qr-review-user-meta-block">
+                                    ${avatarHtml}
+                                    <div class="qr-review-user-text-block">
+                                        <div class="qr-review-user-name">${escapeHtml(review.userName)}</div>
+                                        <div class="qr-review-user-date">${review.date}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-review-text-block">
+                            <div class="qr-review-product-name">${escapeHtml(review.productName)}</div>
+                            <div class="qr-review-body-text">${escapeHtml(review.body)}</div>
+                        </div>
+                        ${mediaHtml}
+                    `;
+
+                    listContainer.appendChild(reviewItem);
+
+                    // Divider
+                    if (index < processedReviews.length - 1) {
+                        const divider = document.createElement('div');
+                        divider.className = 'qr-review-divider';
+                        listContainer.appendChild(divider);
+                    }
+                });
+
+                // Attach video overlay controls
+                document.querySelectorAll('.qr-review-thumb-video').forEach(wrapper => {
+                    const video = wrapper.querySelector('video');
+                    const playOverlay = wrapper.querySelector('.qr-video-play-overlay');
+
+                    wrapper.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (video.paused) {
+                            video.play();
+                            playOverlay.classList.add('hidden');
+                        } else {
+                            video.pause();
+                            playOverlay.classList.remove('hidden');
+                        }
+                    });
+                });
+            }
+
+            function escapeHtml(text) {
+                const map = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                };
+                return text.replace(/[&<>"']/g, function (m) { return map[m]; });
+            }
+
+            // Modal Controls
+            const openModal = () => {
+                formCard.classList.remove('hidden');
+                modalOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent main page scrolling
+            };
+
+            const closeModal = () => {
+                formCard.classList.add('hidden');
+                modalOverlay.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore main page scrolling
+            };
+
+            writeReviewBtn.addEventListener('click', openModal);
+            closeFormBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', closeModal);
+
+            // Restore active filter pill from sessionStorage using data-filter attribute
+            filterPills.forEach(pill => {
+                const pillFilter = pill.getAttribute('data-filter');
+                if (pillFilter === currentFilter) {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                }
+            });
+
+            // Filter pills logic
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    currentFilter = pill.getAttribute('data-filter');
+                    sessionStorage.setItem('qr_filter', currentFilter);
+                    renderReviews();
+                });
+            });
+
+            // Stars Selection Logic
+            modalStars.forEach((star, index) => {
+                star.addEventListener('mouseover', () => {
+                    highlightStars(index + 1);
+                });
+
+                star.addEventListener('mouseout', () => {
+                    highlightStars(selectedRating);
+                });
+
+                star.addEventListener('click', () => {
+                    selectedRating = index + 1;
+                    highlightStars(selectedRating);
+                });
+            });
+
+            function highlightStars(rating) {
+                modalStars.forEach((star, index) => {
+                    if (index < rating) {
+                        star.classList.add('selected');
+                    } else {
+                        star.classList.remove('selected');
+                    }
+                });
+            }
+
+            // Restore active sort menu item from sessionStorage
+            menuItems.forEach(item => {
+                if (item.getAttribute('data-sort') === currentSort) {
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                }
+            });
+
+            // Sort Menu Toggle & Selection logic
+            sortBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sortMenu.classList.toggle('hidden');
+            });
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    sortMenu.classList.add('hidden');
+
+                    currentSort = item.getAttribute('data-sort');
+                    sessionStorage.setItem('qr_sort', currentSort);
+                    renderReviews();
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!sortMenu.classList.contains('hidden') &&
+                    !sortMenu.contains(e.target) &&
+                    !sortBtn.contains(e.target)) {
+                    sortMenu.classList.add('hidden');
+                }
+            });
+
+            // Review Submission Logic
+            submitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const reviewText = document.querySelector('.qr-form-textarea').value.trim();
+                const nameInput = document.querySelector('.qr-form-input[placeholder="Enter your name"]');
+                const emailInput = document.querySelector('.qr-form-input[placeholder="Enter your email"]');
+                const name = nameInput.value.trim();
+                const email = emailInput.value.trim();
+
+                // Validations
+                if (selectedRating === 0) {
+                    alert('Please select a rating star.');
+                    return;
+                }
+                if (reviewText === '') {
+                    alert('Please enter your review text.');
+                    return;
+                }
+                if (name === '') {
+                    alert('Please enter your name.');
+                    return;
+                }
+
+                const newReview = {
+                    id: reviewsData.length + 1,
+                    rating: selectedRating,
+                    userName: name,
+                    userAvatar: null,
+                    date: new Date().toLocaleDateString('en-US'),
+                    productName: "Hydrating Eye Cream",
+                    body: reviewText,
+                    media: []
+                };
+
+                // Submit state
+                submitBtn.disabled = true;
+                const submitText = document.querySelector('.qr-form-submit-btn-text');
+                const originalText = submitText.innerText;
+                submitText.innerText = 'Submitting...';
+
+                // Simulated API call (delay of 600ms for premium feels)
+                setTimeout(() => {
+                    reviewsData.unshift(newReview);
+
+                    // Reset Form
+                    document.querySelector('.qr-form-textarea').value = '';
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    selectedRating = 0;
+                    highlightStars(0);
+
+                    // Re-render
+                    renderReviews();
+
+                    // Close modal
+                    closeModal();
+
+                    // Reset submit button state
+                    submitBtn.disabled = false;
+                    submitText.innerText = originalText;
+
+                    alert('Thank you! Your review has been submitted successfully.');
+                }, 600);
+            });
+
+            // Initial Render
+            renderReviews();
+        });
+    </script>
+</body>
+
+</html>

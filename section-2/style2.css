@@ -131,6 +131,30 @@
  }
 
  /* ── Swiper ── */
+ .qrv-swiper-clip {
+   overflow: hidden;
+   width: 100%;
+   /* Extra vertical padding so tallest active card is not vertically clipped */
+   padding: 10px 0;
+   margin: -10px 0;
+
+   /* Smoothly fade out the outermost half-cards at both edges */
+   -webkit-mask-image: linear-gradient(
+     to right,
+     transparent 0%,
+     black 10%,
+     black 90%,
+     transparent 100%
+   );
+   mask-image: linear-gradient(
+     to right,
+     transparent 0%,
+     black 10%,
+     black 90%,
+     transparent 100%
+   );
+ }
+
  .qrv-swiper {
    overflow: visible !important;
    width: 100%;

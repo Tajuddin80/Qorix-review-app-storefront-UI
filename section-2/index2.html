@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Reviews – Video Stack</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style2.css">
   </head>
 
   <body>
@@ -57,8 +57,10 @@
 
       <!-- ════════ CAROUSEL ════════ -->
       <div class="qrv-carousel">
-        <div class="swiper qrv-swiper">
-          <div class="swiper-wrapper">
+        <!-- Inner clip wrapper hides the outermost half-cards -->
+        <div class="qrv-swiper-clip">
+          <div class="swiper qrv-swiper">
+            <div class="swiper-wrapper">
 
             <!-- ── Slide 1 (outer left, smallest) ── -->
             <div class="swiper-slide">
@@ -233,7 +235,8 @@
             <span class="qrv-dot" data-index="3"></span>
             <span class="qrv-dot" data-index="4"></span>
           </div>
-        </div><!-- /.swiper -->
+          </div><!-- /.swiper -->
+        </div><!-- /.qrv-swiper-clip -->
 
         <!-- Navigation arrows -->
         <button class="qrv-nav qrv-nav-prev" aria-label="Previous slide">
