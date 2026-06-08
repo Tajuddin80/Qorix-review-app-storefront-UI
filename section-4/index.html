@@ -72,10 +72,6 @@
                                 <div class="qr-menu-item-blank"></div>
                                 <span class="qr-menu-item-text">Videos first</span>
                             </button>
-                            <button class="qr-menu-item" data-sort="most-helpful">
-                                <div class="qr-menu-item-blank"></div>
-                                <span class="qr-menu-item-text">Most helpful</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -310,9 +306,7 @@
                     { type: "image", url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=300&h=300&q=80" },
                     { type: "image", url: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=300&h=300&q=80" },
                     { type: "image", url: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&h=300&q=80" }
-                ],
-                helpfulCount: 5,
-                voted: false
+                ]
             },
             {
                 id: 2,
@@ -326,9 +320,7 @@
                     { type: "image", url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=300&h=300&q=80" },
                     { type: "image", url: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=300&h=300&q=80" },
                     { type: "image", url: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&h=300&q=80" }
-                ],
-                helpfulCount: 12,
-                voted: false
+                ]
             },
             {
                 id: 3,
@@ -342,9 +334,7 @@
                     { type: "image", url: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=300&h=300&q=80" },
                     { type: "image", url: "https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=300&h=300&q=80" },
                     { type: "image", url: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=300&h=300&q=80" }
-                ],
-                helpfulCount: 8,
-                voted: false
+                ]
             },
             {
                 id: 4,
@@ -354,9 +344,7 @@
                 date: "10/01/26",
                 productName: "Hydrating Eye Cream",
                 body: "It's decent but a bit greasy for my oily skin. Nice packaging though.",
-                media: [],
-                helpfulCount: 2,
-                voted: false
+                media: []
             },
             {
                 id: 5,
@@ -368,9 +356,7 @@
                 body: "Best eye cream I've ever used. Here is a quick video showcasing the texture!",
                 media: [
                     { type: "video", url: "https://assets.mixkit.co/videos/preview/mixkit-skin-cream-being-applied-41882-large.mp4" }
-                ],
-                helpfulCount: 15,
-                voted: false
+                ]
             }
         ];
         document.addEventListener('DOMContentLoaded', () => {
@@ -388,7 +374,12 @@
             let selectedRating = 0;
             // Restore sort & filter from sessionStorage so selections survive page refreshes
             let currentFilter = sessionStorage.getItem('qr_filter') || 'All';
+            const allowedSorts = ['highest', 'lowest', 'pictures-first', 'videos-first', 'only-pictures'];
             let currentSort = sessionStorage.getItem('qr_sort') || 'highest';
+            if (!allowedSorts.includes(currentSort)) {
+                currentSort = 'highest';
+                sessionStorage.setItem('qr_sort', currentSort);
+            }
 
             // Initial reviews dataset
             const reviewsData = window.qorixReviewQuickReviewWidget || [];
@@ -431,8 +422,6 @@
                         const aHasVid = a.media && a.media.some(m => m.type === 'video') ? 1 : 0;
                         const bHasVid = b.media && b.media.some(m => m.type === 'video') ? 1 : 0;
                         return bHasVid - aHasVid;
-                    } else if (currentSort === 'most-helpful') {
-                        return b.helpfulCount - a.helpfulCount;
                     }
                     return 0;
                 });

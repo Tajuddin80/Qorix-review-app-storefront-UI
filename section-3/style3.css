@@ -1,17 +1,5 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-
-  background: #fff;
-}
-
 /* ─── Section wrapper ─────────────────────────────────────── */
-.qr-real-review-section {
+[data-section="qorix-review-quoteloop-widget"] .qr-real-review-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,21 +11,21 @@ body {
 }
 
 /* ─── Header block ────────────────────────────────────────── */
-.qr-section-header {
+[data-section="qorix-review-quoteloop-widget"] .qr-section-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
 
-.qr-title-group {
+[data-section="qorix-review-quoteloop-widget"] .qr-title-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.qr-subtitle {
+[data-section="qorix-review-quoteloop-widget"] .qr-subtitle {
   margin: 0;
 
   font-size: 1rem;
@@ -65,7 +53,7 @@ body {
 }
 
 /* ─── Rating bar ──────────────────────────────────────────── */
-.qr-rating-bar {
+[data-section="qorix-review-quoteloop-widget"] .qr-rating-bar {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -73,13 +61,13 @@ body {
   gap: 16px;
 }
 
-.qr-stars-group {
+[data-section="qorix-review-quoteloop-widget"] .qr-stars-group {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.qr-reviews-stars {
+[data-section="qorix-review-quoteloop-widget"] .qr-reviews-stars {
   display: inline-flex;
   gap: 4px;
   list-style: none;
@@ -87,46 +75,46 @@ body {
   padding: 0;
 }
 
-.qr-rating-score {
+[data-section="qorix-review-quoteloop-widget"] .qr-rating-score {
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
   color: var(---color-primary);
 }
 
-.qr-review-count {
+[data-section="qorix-review-quoteloop-widget"] .qr-review-count {
   font-size: 1rem;
   line-height: 1.25;
   color: var(---color-gray);
 }
 
-.qr-divider {
+[data-section="qorix-review-quoteloop-widget"] .qr-divider {
   width: 1px;
   height: 20px;
   border-left: 1.5px solid rgba(48, 48, 48, 0.3);
 }
 
-.qr-verified-group {
+[data-section="qorix-review-quoteloop-widget"] .qr-verified-group {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.qr-verified-label {
+[data-section="qorix-review-quoteloop-widget"] .qr-verified-label {
   font-size: 1rem;
   line-height: 1.25;
   color: var(---color-gray);
 }
 
 /* ─── Swiper container ────────────────────────────────────── */
-.qr-swiper-wrapper {
+[data-section="qorix-review-quoteloop-widget"] .qr-swiper-wrapper {
   width: 100%;
   max-width: 1240px;
   position: relative;
   margin: 0 auto;
 }
 
-.swiper {
+[data-section="qorix-review-quoteloop-widget"] .swiper {
   width: 100%;
   padding-top: 40px;
   padding-bottom: 48px !important;
@@ -138,13 +126,13 @@ body {
 }
 
 /* Swiper adds this class after init — reveal the carousel smoothly */
-.swiper.swiper-initialized {
+[data-section="qorix-review-quoteloop-widget"] .swiper.swiper-initialized {
   opacity: 1;
 }
 
 /* nav arrows */
-.swiper-button-next,
-.swiper-button-prev {
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-next,
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-prev {
   width: 44px;
   height: 44px;
   background: #fff;
@@ -167,29 +155,29 @@ body {
 }
 
 /* hide Swiper's default ::after arrow text */
-.swiper-button-next::after,
-.swiper-button-prev::after {
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-next::after,
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-prev::after {
   display: none;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-next:hover,
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-prev:hover {
   box-shadow:
     inset 0px -1px 0px #999,
     inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
     inset 0px 0.5px 0px 1.5px #fff;
 }
 
-.swiper-button-next {
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-next {
   right: -22px;
 }
 
-.swiper-button-prev {
+[data-section="qorix-review-quoteloop-widget"] .swiper-button-prev {
   left: -22px;
 }
 
 /* pagination dots */
-.swiper-pagination-bullet {
+[data-section="qorix-review-quoteloop-widget"] .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background: #34c759;
@@ -197,12 +185,12 @@ body {
   transition: opacity 0.2s;
 }
 
-.swiper-pagination-bullet-active {
+[data-section="qorix-review-quoteloop-widget"] .swiper-pagination-bullet-active {
   opacity: 1;
 }
 
 /* ─── Card ────────────────────────────────────────────────── */
-.swiper-slide {
+[data-section="qorix-review-quoteloop-widget"] .swiper-slide {
   width: 368px !important;
   height: 573px;
   display: flex;
@@ -212,7 +200,7 @@ body {
 }
 
 /* Inactive card: 368×533, border #EBEBEB (Figma Frame 346) */
-.qr-review-card {
+[data-section="qorix-review-quoteloop-widget"] .qr-review-card {
   display: flex;
   flex-direction: column;
   padding: 50px 20px 24px;
@@ -229,7 +217,7 @@ body {
 }
 
 /* Active card: 464×573, border #EBEBEB, shadow (Figma Frame 343) */
-.swiper-slide-active .qr-review-card {
+[data-section="qorix-review-quoteloop-widget"] .swiper-slide-active .qr-review-card {
   width: 464px;
   height: 573px;
   border: 1px solid #EBEBEB;
@@ -237,20 +225,20 @@ body {
 }
 
 /* image area: quote icon centered, ~50px from top via card padding */
-.qr-review-card-image {
+[data-section="qorix-review-quoteloop-widget"] .qr-review-card-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
-.play-btn:hover {
+[data-section="qorix-review-quoteloop-widget"] .play-btn:hover {
   background: #fff;
   transform: translate(-50%, -50%) scale(1.08);
 }
 
 /* card content: takes remaining space, centers text content vertically */
-.qr-review-card-content {
+[data-section="qorix-review-quoteloop-widget"] .qr-review-card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -258,14 +246,14 @@ body {
   /* quote icon 90px + top-padding 50px = 190px from card top, but padding handles 50px already */
 }
 
-.review-text {
+[data-section="qorix-review-quoteloop-widget"] .review-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.review-stars ul {
+[data-section="qorix-review-quoteloop-widget"] .review-stars ul {
   display: inline-flex;
   list-style: none;
   flex-direction: row;
@@ -274,7 +262,7 @@ body {
   gap: 0;
 }
 
-.product-title {
+[data-section="qorix-review-quoteloop-widget"] .product-title {
   margin: 0;
 
   font-weight: 500;
@@ -284,7 +272,7 @@ body {
   color: #0d2440;
 }
 
-.review-quote {
+[data-section="qorix-review-quoteloop-widget"] .review-quote {
   font-size: 24px;
   color: var(---color-primary);
   text-align: center;
@@ -294,7 +282,7 @@ body {
 }
 
 /* Footer block: pushed to bottom by margin-top:auto — replicates Figma absolute top:413px (inactive) / top:453px (active) */
-.qr-card-divider {
+[data-section="qorix-review-quoteloop-widget"] .qr-card-divider {
   width: 100%;
   height: 1px;
   background: #F0F0F0;
@@ -304,7 +292,7 @@ body {
 }
 
 /* reviewer */
-.review-user {
+[data-section="qorix-review-quoteloop-widget"] [data-section="qorix-review-quoteloop-widget"].review-user {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -312,7 +300,7 @@ body {
   gap: 16px;
 }
 
-.user-avatar {
+[data-section="qorix-review-quoteloop-widget"].user-avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -321,13 +309,13 @@ body {
   background: #eff2f5;
 }
 
-.user-info {
+[data-section="qorix-review-quoteloop-widget"].user-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.user-name {
+[data-section="qorix-review-quoteloop-widget"].user-name {
   margin: 0;
   font-weight: 500;
   font-size: 16px;
@@ -338,7 +326,7 @@ body {
   gap: 8px;
 }
 
-.review-product {
+[data-section="qorix-review-quoteloop-widget"].review-product {
   margin: 0;
   font-size: 16px;
   line-height: 20px;
@@ -349,103 +337,103 @@ body {
 
 /* ── Tablet  (601 – 960px): scale cards down, keep 2 visible ── */
 @media (max-width: 960px) {
-  .qr-real-review-section {
+  [data-section="qorix-review-quoteloop-widget"] .qr-real-review-section {
     padding: 60px 24px;
     gap: 40px;
   }
 
-  .qr-heading {
+  [data-section="qorix-review-quoteloop-widget"] .qr-heading {
     font-size: 28px;
   }
 
   /* Scale slide containers */
-  .swiper-slide {
+  [data-section="qorix-review-quoteloop-widget"] .swiper-slide {
     width: 260px !important;
     height: 500px;
   }
 
   /* Inactive card */
-  .qr-review-card {
+  [data-section="qorix-review-quoteloop-widget"] .qr-review-card {
     width: 260px;
     height: 460px;
     padding: 40px 16px 20px;
   }
 
   /* Active card */
-  .swiper-slide-active .qr-review-card {
+  [data-section="qorix-review-quoteloop-widget"].swiper-slide-active .qr-review-card {
     width: 320px;
     height: 500px;
   }
 
-  .qr-review-card-content {
+  [data-section="qorix-review-quoteloop-widget"] .qr-review-card-content {
     margin-top: 36px;
   }
 
-  .review-quote {
+  [data-section="qorix-review-quoteloop-widget"] .review-quote {
     font-size: 20px;
     line-height: 26px;
   }
 
-  .qr-card-divider {
+  [data-section="qorix-review-quoteloop-widget"] .qr-card-divider {
     margin-bottom: 28px;
   }
 
   /* Pull arrows in so they don't overflow */
-  .swiper-button-next {
+  [data-section="qorix-review-quoteloop-widget"] .swiper-button-next {
     right: -8px;
   }
 
-  .swiper-button-prev {
+  [data-section="qorix-review-quoteloop-widget"] .swiper-button-prev {
     left: -8px;
   }
 }
 
 /* ── Mobile (≤ 600px): single full-width card, no arrows ── */
 @media (max-width: 600px) {
-  .qr-real-review-section {
+  [data-section="qorix-review-quoteloop-widget"] .qr-real-review-section {
     padding: 48px 16px;
     gap: 28px;
   }
 
-  .qr-section-header {
+  [data-section="qorix-review-quoteloop-widget"] .qr-section-header {
     gap: 16px;
   }
 
-  .qr-heading {
+  [data-section="qorix-review-quoteloop-widget"] .qr-heading {
     font-size: 22px;
   }
 
-  .qr-subtitle {
+  [data-section="qorix-review-quoteloop-widget"] .qr-subtitle {
     font-size: 0.85rem;
   }
 
-  .qr-description {
+  [data-section="qorix-review-quoteloop-widget"] .qr-description {
     font-size: 0.9rem;
   }
 
-  .qr-rating-bar {
+  [data-section="qorix-review-quoteloop-widget"] .qr-rating-bar {
     flex-direction: column;
     gap: 8px;
   }
 
   /* Hide the vertical divider in rating bar on mobile */
-  .qr-divider {
+  [data-section="qorix-review-quoteloop-widget"] .qr-divider {
     display: none;
   }
 
-  .qr-rating-score {
+  [data-section="qorix-review-quoteloop-widget"] .qr-rating-score {
     font-size: 18px;
   }
 
   /* Full-width slides */
-  .swiper-slide {
+  [data-section="qorix-review-quoteloop-widget"] .swiper-slide {
     width: calc(100vw - 56px) !important;
     height: auto !important;
   }
 
   /* All cards same size on mobile — no expansion effect */
-  .qr-review-card,
-  .swiper-slide-active .qr-review-card {
+  [data-section="qorix-review-quoteloop-widget"] .qr-review-card,
+  [data-section="qorix-review-quoteloop-widget"].swiper-slide-active .qr-review-card {
     width: 100%;
     height: auto;
     min-height: 360px;
@@ -454,50 +442,50 @@ body {
     border: 1px solid #EBEBEB;
   }
 
-  .qr-review-card-content {
+  [data-section="qorix-review-quoteloop-widget"] .qr-review-card-content {
     margin-top: 28px;
   }
 
-  .review-quote {
+  [data-section="qorix-review-quoteloop-widget"] .review-quote {
     font-size: 18px;
     line-height: 24px;
   }
 
-  .qr-card-divider {
+  [data-section="qorix-review-quoteloop-widget"] .qr-card-divider {
     margin-bottom: 24px;
   }
 
-  .user-name {
+  [data-section="qorix-review-quoteloop-widget"] .user-name {
     font-size: 14px;
   }
 
-  .review-product {
+  [data-section="qorix-review-quoteloop-widget"] .review-product {
     font-size: 14px;
   }
 
-  .user-avatar {
+  [data-section="qorix-review-quoteloop-widget"] .user-avatar {
     width: 44px;
     height: 44px;
   }
 
   /* Hide arrows — swipe gesture only on mobile */
-  .swiper-button-next,
-  .swiper-button-prev {
+  [data-section="qorix-review-quoteloop-widget"] .swiper-button-next,
+  [data-section="qorix-review-quoteloop-widget"] .swiper-button-prev {
     display: none;
   }
 
   /* Pagination dots closer to cards */
-  .swiper {
+  [data-section="qorix-review-quoteloop-widget"] .swiper {
     padding-bottom: 36px !important;
   }
 }
 
-[data-swiper-controller] svg {
+[data-section="qorix-review-quoteloop-widget"] [data-swiper-controller] svg {
   width: 20px;
   height: 20px;
 }
 
-.line-clamp {
+[data-section="qorix-review-quoteloop-widget"] .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
