@@ -46,7 +46,6 @@
 
 [data-section="qorix-review-reel-widget"] .qr-description {
   margin: 0;
-
   font-size: 1rem;
   line-height: 19px;
   color: var(---color-primary);
@@ -108,7 +107,8 @@
 
 /* ─── Swiper container ────────────────────────────────────── */
 [data-section="qorix-review-reel-widget"] .qr-swiper-wrapper {
-  width: 100%;
+  width: 90%;
+  margin: 50px auto;
   position: relative;
 }
 
@@ -153,11 +153,11 @@
 }
 
 [data-section="qorix-review-reel-widget"] .swiper-button-next {
-  right: -10px;
+  right: 5px;
 }
 
 [data-section="qorix-review-reel-widget"] .swiper-button-prev {
-  left: -10px;
+  left: 5px;
 }
 
 /* pagination dots */
