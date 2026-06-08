@@ -35,7 +35,7 @@
   color: var(---color-secondary);
 }
 
-.qr-heading {
+[data-section="qorix-review-quoteloop-widget"] .qr-heading {
   margin: 0;
 
   font-weight: 600;
@@ -44,7 +44,7 @@
   color: var(---color-primary);
 }
 
-.qr-description {
+[data-section="qorix-review-quoteloop-widget"] .qr-description {
   margin: 0;
 
   font-size: 1rem;
@@ -292,7 +292,7 @@
 }
 
 /* reviewer */
-[data-section="qorix-review-quoteloop-widget"] [data-section="qorix-review-quoteloop-widget"].review-user {
+[data-section="qorix-review-quoteloop-widget"] .review-user {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -300,7 +300,7 @@
   gap: 16px;
 }
 
-[data-section="qorix-review-quoteloop-widget"].user-avatar {
+[data-section="qorix-review-quoteloop-widget"] .user-avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -309,13 +309,13 @@
   background: #eff2f5;
 }
 
-[data-section="qorix-review-quoteloop-widget"].user-info {
+[data-section="qorix-review-quoteloop-widget"] .user-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-[data-section="qorix-review-quoteloop-widget"].user-name {
+[data-section="qorix-review-quoteloop-widget"] .user-name {
   margin: 0;
   font-weight: 500;
   font-size: 16px;
@@ -326,7 +326,7 @@
   gap: 8px;
 }
 
-[data-section="qorix-review-quoteloop-widget"].review-product {
+[data-section="qorix-review-quoteloop-widget"] .review-product {
   margin: 0;
   font-size: 16px;
   line-height: 20px;
